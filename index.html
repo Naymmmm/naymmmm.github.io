@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Website</title>
+    <title>print("naymmm is cool!")</title>
     <style>
         /* Styling for the introduction section */
         body {
@@ -25,6 +25,8 @@
 
         .intro-text {
             font-size: 36px;
+            overflow: hidden; /* Hide overflow for typing animation */
+            white-space: nowrap; /* Prevent text from wrapping */
             animation: typing 3s steps(12), blink-caret 0.5s step-end infinite;
         }
 
@@ -40,22 +42,12 @@
             50% { border-right: 2px solid transparent; }
         }
 
-        /* Styling for the "Learn More" button */
-        .learn-more-button {
+        /* Styling for the "Learn More" arrow */
+        .scroll-down {
             margin-top: 20px;
-            background-color: #007BFF; /* Button background color */
-            color: #fff;
-            padding: 10px 20px;
-            border: none;
+            font-size: 24px;
+            color: #007BFF; /* Arrow color */
             cursor: pointer;
-            border-radius: 5px;
-            font-size: 18px;
-            text-decoration: none;
-        }
-
-        /* Hover effect for the button */
-        .learn-more-button:hover {
-            background-color: #0056b3; /* Darker shade on hover */
         }
 
         /* Styling for the main content section */
@@ -67,15 +59,25 @@
 <body>
     <div class="intro-section">
         <div class="intro-text">
-            <p>Hello</p>
+            <p>Hello 👋</p>
         </div>
-        <a href="#about-me" class="learn-more-button">Learn More</a>
+        <div class="scroll-down" onclick="scrollToContent()">
+            &#8595; <!-- Unicode arrow character pointing down -->
+        </div>
     </div>
 
-    <div id="about-me" class="main-content">
+    <div class="main-content" id="content">
         <!-- Add your content about yourself here -->
         <h2>About Me</h2>
         <p>This is where you can provide information about yourself.</p>
     </div>
+
+    <script>
+        // JavaScript function to scroll to the main content
+        function scrollToContent() {
+            const contentElement = document.getElementById("content");
+            contentElement.scrollIntoView({ behavior: "smooth" });
+        }
+    </script>
 </body>
 </html>
