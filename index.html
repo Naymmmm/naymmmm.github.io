@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Website</title>
+    <style>
+        /* Styling for the introduction section */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #111; /* Dark background color */
+            color: #fff; /* Text color */
+        }
+
+        .intro-section {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .intro-text {
+            font-size: 36px;
+            animation: typing 3s steps(12), blink-caret 0.5s step-end infinite;
+        }
+
+        /* Keyframes for typing animation */
+        @keyframes typing {
+            from { width: 0; }
+            to { width: 100%; }
+        }
+
+        /* Blinking cursor animation */
+        @keyframes blink-caret {
+            from, to { border-right: 2px solid #fff; }
+            50% { border-right: 2px solid transparent; }
+        }
+
+        /* Styling for the "Learn More" button */
+        .learn-more-button {
+            margin-top: 20px;
+            background-color: #007BFF; /* Button background color */
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 18px;
+            text-decoration: none;
+        }
+
+        /* Hover effect for the button */
+        .learn-more-button:hover {
+            background-color: #0056b3; /* Darker shade on hover */
+        }
+
+        /* Styling for the main content section */
+        .main-content {
+            padding: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="intro-section">
+        <div class="intro-text">
+            <p>Hello</p>
+        </div>
+        <a href="#about-me" class="learn-more-button">Learn More</a>
+    </div>
+
+    <div id="about-me" class="main-content">
+        <!-- Add your content about yourself here -->
+        <h2>About Me</h2>
+        <p>This is where you can provide information about yourself.</p>
+    </div>
+</body>
+</html>
